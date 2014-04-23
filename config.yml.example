@@ -1,0 +1,15 @@
+---
+:client:
+  :consumer_key: "YOUR_CONSUMER_KEY"
+  :consumer_secret: "YOUR_CONSUMER_SECRET"
+  :access_token: "YOUR_ACCESS_TOKEN"
+  :access_token_secret: "YOUR_ACCESS_SECRET"
+
+# Array of Twitter user ids, or remove it to forward all tweets.
+:selected_user_ids:
+  - 1 # first ID
+  - 2 # second ID
+  - 3 # third ID
+  # and so on...
+
+:fleep_hook_url: "YOUR_FLEEP_HOOK_URL"
