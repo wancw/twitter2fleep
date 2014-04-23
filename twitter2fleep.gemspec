@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'twitter2fleep'
-  s.version     = '0.1.0'
+  s.version     = '0.2.0'
   s.date        = '2014-04-23'
   s.summary     = 'Twitter to Fleep'
   s.description = 'Forward tweets to Fleep.io conversation.'
