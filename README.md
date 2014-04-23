@@ -22,7 +22,7 @@ Or install it yourself as:
 
 Please create the config file `~/.twitter2fleep/config.yml`.
 
-There is a example at [Config Example][]
+There is the [example][Config Example].
 
 
 ## Usage
