@@ -32,12 +32,14 @@ client.user do |object|
     tweet = object
     author = tweet.user
     if selected_user_ids.nil? or selected_user_ids.include?(author.id)
+      message = "@#{author.screen_name}:\n#{tweet.text}"
+
       response = HTTP.post(
         "#{fleep_hook_url}/#{author.screen_name}",
-        :form => {:message => tweet.text}
+        :form => {:message => message}
       ).response
 
-      puts "@#{author.screen_name}: #{tweet.text}"
+      puts message
       puts "----> #{response.status_code}"
     end
   when Twitter::Streaming::StallWarning
