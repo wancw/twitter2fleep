@@ -6,7 +6,14 @@ require 'twitter'
 require 'http'
 require 'yaml'
 
-t2f_config = YAML::load_file('config.yml')
+begin
+  config_file = "#{Dir.home}/.twitter2fleep/config.yml"
+  t2f_config = YAML::load_file(config_file)
+rescue Errno::ENOENT => exception
+  puts "You need to create the config file ~/.twitter2fleep/config.yml"
+  puts "See example at https://github.com/wancw/twitter2fleep/blob/master/config.yml.example"
+  exit(-1)
+end
 
 client = Twitter::Streaming::Client.new do |client_config|
   client_config.consumer_key        = t2f_config[:client][:consumer_key]
