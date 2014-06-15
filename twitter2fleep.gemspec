@@ -15,6 +15,6 @@ Gem::Specification.new do |s|
   s.executables << 'twitter2fleep'
   s.license     = 'MIT'
 
-  s.add_dependency 'twitter', '~> 5.8'
+  s.add_dependency 'twitter', '~> 5.8.0'
   s.add_dependency 'thor', '~> 0.19.1'
 end
