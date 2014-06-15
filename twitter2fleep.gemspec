@@ -16,4 +16,5 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.add_dependency 'twitter', '~> 5.8'
+  s.add_dependency 'thor', '~> 0.19.1'
 end
