@@ -46,9 +46,6 @@ class Twitter2Fleep::CLI < Thor
         exit(-1)
       end
 
-      config[:twitter] = config[:client]
-      config.delete :config
-
       return config
     end
   end
