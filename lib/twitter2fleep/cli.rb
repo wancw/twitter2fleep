@@ -14,6 +14,7 @@ class Twitter2Fleep::CLI < Thor
       puts "See example at https://github.com/wancw/twitter2fleep/blob/master/config.yml.example"
       exit(-1)
     end
+    t2f_config[:twitter] = t2f_config[:client]
 
     bot = Twitter2Fleep::Bot.new(t2f_config)
     bot.start

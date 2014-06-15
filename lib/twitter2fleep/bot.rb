@@ -3,7 +3,7 @@ require 'http'
 
 class Twitter2Fleep::Bot
   def initialize(config)
-    @twitter_client = Twitter::Streaming::Client.new(config[:client])
+    @twitter_client = Twitter::Streaming::Client.new(config[:twitter])
     @selected_user_ids = config[:selected_user_ids]
     @fleep_hook_url = config[:fleep_hook_url]
   end
