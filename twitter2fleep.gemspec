@@ -1,6 +1,10 @@
+lib = File.expand_path("../lib", __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'twitter2fleep/version'
+
 Gem::Specification.new do |s|
   s.name        = 'twitter2fleep'
-  s.version     = '0.3.0'
+  s.version     = Twitter2Fleep::VERSION
   s.date        = '2014-04-23'
   s.summary     = 'Twitter to Fleep'
   s.description = 'Forward tweets to Fleep.io conversation.'
