@@ -5,12 +5,14 @@ require 'yaml'
 
 class Twitter2Fleep::CLI < Thor
   desc "start", "Start the bot"
+  option :config_file, :default => "#{Dir.home}/.twitter2fleep/config.yml"
+
   def start
+    config_file = options[:config_file]
     begin
-      config_file = "#{Dir.home}/.twitter2fleep/config.yml"
       t2f_config = YAML::load_file(config_file)
     rescue Errno::ENOENT => exception
-      puts "You need to create the config file ~/.twitter2fleep/config.yml"
+      puts "You need to create the config file \`#{config_file}\`"
       puts "See example at https://github.com/wancw/twitter2fleep/blob/master/config.yml.example"
       exit(-1)
     end
