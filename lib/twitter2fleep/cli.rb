@@ -10,6 +10,7 @@ module Twitter2Fleep
     option :env_config, :type => :boolean, :default => false
 
     def start
+      $stdout.sync = true
       if options[:env_config]
         puts "Load config from environment variables."
         config = load_env_config
